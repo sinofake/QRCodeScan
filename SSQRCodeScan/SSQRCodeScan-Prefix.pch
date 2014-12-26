@@ -1,0 +1,28 @@
+//
+//  SSQRCodeScan-Prefix.pch
+//  SSQRCodeScan
+//
+//  Created by zhucuirong on 14/12/22.
+//  Copyright (c) 2014年 elong. All rights reserved.
+//
+
+#ifndef SSQRCodeScan_SSQRCodeScan_Prefix_pch
+#define SSQRCodeScan_SSQRCodeScan_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "SDiPhoneVersion.h"
+#endif
+
+#define UIColorFromHex(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16))/255.0 green:((float)((hex & 0xFF00) >> 8))/255.0 blue:((float)(hex & 0xFF))/255.0 alpha:1.0]
+
+#define SCREEN_BOUNDS                   [[UIScreen mainScreen]    bounds]
+#define SCREEN_WIDTH                       [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT                      [[UIScreen mainScreen] bounds].size.height
+
+#endif
