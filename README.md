@@ -2,7 +2,7 @@ QRCodeScan
 ==========
 
 ## Screenshot
-![screenshot](demo.jpg)                                          
+![screenshot](demo.jpg)      
 
 ## 说明
 
