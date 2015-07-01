@@ -47,10 +47,10 @@
     self.readerDelegate = self;
     self.supportedOrientationsMask = UIInterfaceOrientationPortrait;
     self.videoQuality = UIImagePickerControllerQualityTypeHigh;
-    
+    self.readerView.session.sessionPreset = AVCaptureSessionPresetHigh;
+
     // EXAMPLE: disable rarely used I2/5 to improve performance
     [self.scanner setSymbology:ZBAR_I25 config:ZBAR_CFG_ENABLE to:0];
-    
     
     //关闭选中二维码时的绿色方框
     self.tracksSymbols = NO;
