@@ -38,9 +38,19 @@
     }
     
     [_metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    if ([[_metadataOutput availableMetadataObjectTypes] containsObject:AVMetadataObjectTypeQRCode]) {
-        [_metadataOutput setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode]];
-    }
+    //    if ([[_metadataOutput availableMetadataObjectTypes] containsObject:AVMetadataObjectTypeQRCode]) {
+    //        [_metadataOutput setMetadataObjectTypes:@[ AVMetadataObjectTypeQRCode]];
+    //    }
+    NSArray *metadataObjectTypes = @[AVMetadataObjectTypeUPCECode,
+                                     AVMetadataObjectTypeCode39Code,
+                                     AVMetadataObjectTypeCode39Mod43Code,
+                                     AVMetadataObjectTypeEAN13Code,
+                                     AVMetadataObjectTypeEAN8Code,
+                                     AVMetadataObjectTypeCode93Code,
+                                     AVMetadataObjectTypeCode128Code,
+                                     AVMetadataObjectTypePDF417Code,
+                                     AVMetadataObjectTypeQRCode];
+    [_metadataOutput setMetadataObjectTypes:metadataObjectTypes];
     [_previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     [_previewLayer setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view.layer insertSublayer:self.previewLayer atIndex:0];
@@ -70,9 +80,9 @@
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     for(AVMetadataObject *current in metadataObjects) {
-        if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
-            && [current.type isEqualToString:AVMetadataObjectTypeQRCode]) {
-            NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *) current stringValue];
+        if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
+            //[current.type isEqualToString:AVMetadataObjectTypeQRCode]
+            NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];
             
             [self stopScanning];
             
