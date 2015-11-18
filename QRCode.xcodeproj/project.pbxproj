@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000943FD1BFC1F5A00A43B88 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 000943FC1BFC1F5A00A43B88 /* QRCodeGenerator.m */; };
 		002CC1F61B43D00400CDAECB /* QRCodeScanMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 002CC1E41B43D00400CDAECB /* QRCodeScanMaskView.m */; };
 		002CC1F71B43D00400CDAECB /* QRCodeScanUseSystemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 002CC1E61B43D00400CDAECB /* QRCodeScanUseSystemVC.m */; };
 		002CC1F81B43D00400CDAECB /* QRCodeScanUseZBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 002CC1E81B43D00400CDAECB /* QRCodeScanUseZBarVC.m */; };
@@ -30,6 +31,7 @@
 		009FF5D21A80BBC100522082 /* QRCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FF5D11A80BBC100522082 /* QRCodeTests.m */; };
 		009FF6121A80BE2500522082 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009FF6111A80BE2500522082 /* ViewController.m */; };
 		009FF6231A80C56800522082 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 009FF6221A80C56800522082 /* libiconv.dylib */; };
+		0BD06B81E65C1695C405BD80 /* libPods-QRCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC2ABE51E85A16FFFFA72D1C /* libPods-QRCode.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000943FB1BFC1F5A00A43B88 /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
+		000943FC1BFC1F5A00A43B88 /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
 		002CC1E31B43D00400CDAECB /* QRCodeScanMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanMaskView.h; sourceTree = "<group>"; };
 		002CC1E41B43D00400CDAECB /* QRCodeScanMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanMaskView.m; sourceTree = "<group>"; };
 		002CC1E51B43D00400CDAECB /* QRCodeScanUseSystemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanUseSystemVC.h; sourceTree = "<group>"; };
@@ -99,6 +103,9 @@
 		009FF6111A80BE2500522082 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		009FF61F1A80BF6400522082 /* QRCode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QRCode-Prefix.pch"; sourceTree = "<group>"; };
 		009FF6221A80C56800522082 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		03A2450F30A3BFA19A871105 /* Pods-QRCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRCode/Pods-QRCode.release.xcconfig"; sourceTree = "<group>"; };
+		11292D4C9AFD790F8A1D6673 /* Pods-QRCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRCode/Pods-QRCode.debug.xcconfig"; sourceTree = "<group>"; };
+		EC2ABE51E85A16FFFFA72D1C /* libPods-QRCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QRCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +115,7 @@
 			files = (
 				002CC2201B43E2AB00CDAECB /* libzbar.a in Frameworks */,
 				009FF6231A80C56800522082 /* libiconv.dylib in Frameworks */,
+				0BD06B81E65C1695C405BD80 /* libPods-QRCode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000943FA1BFC1F5A00A43B88 /* QRCodeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				000943FB1BFC1F5A00A43B88 /* QRCodeGenerator.h */,
+				000943FC1BFC1F5A00A43B88 /* QRCodeGenerator.m */,
+			);
+			path = QRCodeGenerator;
+			sourceTree = "<group>";
+		};
 		002CC1E11B43D00400CDAECB /* QRCodeScan */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +226,7 @@
 				009FF6211A80C51F00522082 /* Frameworks */,
 				009FF5CE1A80BBC100522082 /* QRCodeTests */,
 				009FF5B91A80BBC100522082 /* Products */,
+				58164571ADF5BB92EF6D2962 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +242,7 @@
 		009FF5BA1A80BBC100522082 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
+				000943FA1BFC1F5A00A43B88 /* QRCodeGenerator */,
 				002CC1E11B43D00400CDAECB /* QRCodeScan */,
 				009FF5BF1A80BBC100522082 /* AppDelegate.h */,
 				009FF5C01A80BBC100522082 /* AppDelegate.m */,
@@ -267,8 +286,18 @@
 			isa = PBXGroup;
 			children = (
 				009FF6221A80C56800522082 /* libiconv.dylib */,
+				EC2ABE51E85A16FFFFA72D1C /* libPods-QRCode.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58164571ADF5BB92EF6D2962 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11292D4C9AFD790F8A1D6673 /* Pods-QRCode.debug.xcconfig */,
+				03A2450F30A3BFA19A871105 /* Pods-QRCode.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 009FF5D51A80BBC100522082 /* Build configuration list for PBXNativeTarget "QRCode" */;
 			buildPhases = (
+				F7A63D1BE436B26501033123 /* Check Pods Manifest.lock */,
 				009FF5B41A80BBC100522082 /* Sources */,
 				009FF5B51A80BBC100522082 /* Frameworks */,
 				009FF5B61A80BBC100522082 /* Resources */,
+				B54588637D0A19D909685EED /* Embed Pods Frameworks */,
+				A1AAC761612C14159DDAC5DB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,6 +407,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A1AAC761612C14159DDAC5DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCode/Pods-QRCode-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B54588637D0A19D909685EED /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCode/Pods-QRCode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7A63D1BE436B26501033123 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		009FF5B41A80BBC100522082 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -385,6 +465,7 @@
 				002CC1F61B43D00400CDAECB /* QRCodeScanMaskView.m in Sources */,
 				002CC1F91B43D00400CDAECB /* QRCodeScanViewController.m in Sources */,
 				009FF5C11A80BBC100522082 /* AppDelegate.m in Sources */,
+				000943FD1BFC1F5A00A43B88 /* QRCodeGenerator.m in Sources */,
 				002CC1F71B43D00400CDAECB /* QRCodeScanUseSystemVC.m in Sources */,
 				002CC1F81B43D00400CDAECB /* QRCodeScanUseZBarVC.m in Sources */,
 				009FF5BE1A80BBC100522082 /* main.m in Sources */,
@@ -499,6 +580,7 @@
 		};
 		009FF5D61A80BBC100522082 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11292D4C9AFD790F8A1D6673 /* Pods-QRCode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
@@ -517,6 +599,7 @@
 		};
 		009FF5D71A80BBC100522082 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A2450F30A3BFA19A871105 /* Pods-QRCode.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;

@@ -79,7 +79,7 @@
 
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
-    for(AVMetadataObject *current in metadataObjects) {
+    for (AVMetadataObject *current in metadataObjects) {
         if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
             //[current.type isEqualToString:AVMetadataObjectTypeQRCode]
             NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *)current stringValue];

@@ -8,17 +8,23 @@
 
 #import "ViewController.h"
 #import "QRCodeScanViewController.h"
+#import "QRCodeGenerator.h"
 
 @interface ViewController ()<QRCodeScanViewControllerDelegate>
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
 @implementation ViewController
 
-- (void)createScanButton {
+- (void)createContents {
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    self.imageView.center = CGPointMake(self.view.center.x, 80 + CGRectGetHeight(self.imageView.frame)/2.f);
+    [self.view addSubview:self.imageView];
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = (CGRect){CGPointZero, 44, 100};
-    button.center = self.view.center;
+    button.frame = CGRectMake(0, 0, 100, 44);
+    button.center = CGPointMake(self.view.center.x, CGRectGetMaxY(self.imageView.frame) + 60);
     [button setTitle:@"扫描" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(scanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
@@ -35,7 +41,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
-    [self createScanButton];
+    
+    [self createContents];
+    
+    self.imageView.image = [QRCodeGenerator qrImageForString:@"darongaixiaohua" imageSize:CGRectGetWidth(self.imageView.frame)];
 }
 
 #pragma mark -o QRCodeScanViewControllerDelegate
