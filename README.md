@@ -15,9 +15,3 @@ CoreMedia.framework
 CoreVideo.framework
 QuartzCore.framework
 libiconv.dylib
-
-##补充
-二维码生成：
-https://github.com/fukuchi/libqrencode
-https://github.com/MartinLi841538513/ProduceQRCodeDemo
-https://github.com/smallMas/FMTQRCode
